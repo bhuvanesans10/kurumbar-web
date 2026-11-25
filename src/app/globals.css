@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FAFAF5;
+  --foreground: #1E293B;
+  --primary: #15803D;
+  --primary-dark: #14532D;
+  --primary-light: #DCFCE7;
+  --accent-yellow: #FACC15;
+  --accent-yellow-light: #FEF9C3;
+  --surface: #FFFFFF;
+  --text-primary: #1E293B;
+  --text-secondary: #475569;
+  --border: #E2E8F0;
+  --error: #DC2626;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-primary-light: var(--primary-light);
+  --color-accent-yellow: var(--accent-yellow);
+  --color-accent-yellow-light: var(--accent-yellow-light);
+  --color-surface: var(--surface);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-border: var(--border);
+  --color-error: var(--error);
+  --font-sans: var(--font-noto-tamil), var(--font-inter), system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+@media print {
+  body {
+    background: transparent !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
